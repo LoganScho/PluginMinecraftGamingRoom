@@ -21,7 +21,6 @@ public class PluginListeners implements Listener {
 			
 			event.setCancelled(true);
 			
-			//player.closeInventory();
 			player.getInventory().addItem(current);
 			player.updateInventory();
 			

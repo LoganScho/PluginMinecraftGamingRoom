@@ -20,10 +20,11 @@ public class CommandAide implements CommandExecutor {
 				p.sendMessage("§e/ville -> Se téléporter à la ville");
 			}
 			
-			if(args.length == 1 && args[0].equalsIgnoreCase("admin")) {
+			if(args.length == 1 && args[0].equalsIgnoreCase("admin") && p.isOp()) {
 				p.sendMessage("§e-------------Commandes Plugin GamingRoom §c§lAdmin§r§e-------------");
 				p.sendMessage("§e/bvn <pseudo> -> Accueillir la personne qui vient de rejoindre");
 				p.sendMessage("§e/event <message> -> Mettre un message d'event");
+				p.sendMessage("§e/monnaie -> Accès aux différentes monnaies");
 				p.sendMessage("§e/rdm -> Prévenir d'un redémarrage du serveur");
 				p.sendMessage("§e/rdv -> Mettre un message d'un rendez-vous à l'église");
 				p.sendMessage("§e/village -> Se teleporter au village");
