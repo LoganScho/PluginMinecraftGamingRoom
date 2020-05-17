@@ -1,5 +1,6 @@
-name: PluginTitle
+name: PluginGamingRoom
 version: 1.0
+api-version: 1.14
 author: Sckoco
 main: be.sckoco.plugintitle.Main
 commands:
@@ -21,3 +22,6 @@ commands:
   ville:
     description: Teleporter un joueur a la ville
     permission: ville.use
+  monnaie:
+    description: Give la monnaie choisie
+    permission: monnaie.use

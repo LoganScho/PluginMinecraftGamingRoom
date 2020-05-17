@@ -4,6 +4,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import be.sckoco.plugintitle.commands.CommandBvn;
 import be.sckoco.plugintitle.commands.CommandEvent;
+import be.sckoco.plugintitle.commands.CommandMonnaie;
 import be.sckoco.plugintitle.commands.CommandAide;
 import be.sckoco.plugintitle.commands.CommandRdm;
 import be.sckoco.plugintitle.commands.CommandRdv;
@@ -22,6 +23,8 @@ public class Main extends JavaPlugin {
 		getCommand("aide").setExecutor(new CommandAide());
 		getCommand("village").setExecutor(new CommandVillage());
 		getCommand("ville").setExecutor(new CommandVille());
+		getCommand("monnaie").setExecutor(new CommandMonnaie());
+		getServer().getPluginManager().registerEvents(new PluginListeners(), this);
 	}
 	
 	@Override
