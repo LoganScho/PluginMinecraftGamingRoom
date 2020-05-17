@@ -1,0 +1,23 @@
+name: PluginTitle
+version: 1.0
+author: Sckoco
+main: be.sckoco.plugintitle.Main
+commands:
+  rdm:
+    description: Afficher message de redemarrage
+    permission: rdm.use
+  event:
+    description: Afficher un message event
+    permission: event.use
+  rdv:
+    description: Afficher message event eglise
+    permission: rdv.use
+  bvn:
+    description: Afficher message bienvenue
+  aide:
+    description: Afficher une aide pour les commandes
+  village:
+    description: Teleporter un joueur au village
+  ville:
+    description: Teleporter un joueur a la ville
+    permission: ville.use
