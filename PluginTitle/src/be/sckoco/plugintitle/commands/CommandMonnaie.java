@@ -10,6 +10,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.inventory.meta.Repairable;
 
 public class CommandMonnaie implements CommandExecutor {
 
@@ -31,6 +32,9 @@ public class CommandMonnaie implements CommandExecutor {
 				monnaieM.addEnchant(Enchantment.LOOT_BONUS_MOBS, 3, true);
 				monnaieM.addEnchant(Enchantment.MENDING, 1, true);
 				monnaie.setItemMeta(monnaieM);
+				Repairable monnaieR = (Repairable) monnaie.getItemMeta();
+				monnaieR.setRepairCost(7);
+				monnaie.setItemMeta((ItemMeta) monnaieR);
 				inv.setItem(3, monnaie);
 				
 				//Billet 10
@@ -44,11 +48,15 @@ public class CommandMonnaie implements CommandExecutor {
 				billetDixM.addEnchant(Enchantment.LOYALTY, 3, true);
 				billetDixM.addEnchant(Enchantment.ARROW_FIRE, 1, true);
 				billetDix.setItemMeta(billetDixM);
+				Repairable billetDixR = (Repairable) billetDix.getItemMeta();
+				billetDixR.setRepairCost(511);
+				billetDix.setItemMeta((ItemMeta) billetDixR);
 				inv.setItem(2, billetDix);
 				
 				//Billet 100
 				ItemStack billetCent = new ItemStack(Material.GOLD_BLOCK, 64);
 				ItemMeta billetCentM = billetCent.getItemMeta();
+				billetCentM.setDisplayName("Billet 100");
 				billetCentM.addEnchant(Enchantment.SILK_TOUCH, 1, true);
 				billetCentM.addEnchant(Enchantment.MENDING, 1, true);
 				billetCentM.addEnchant(Enchantment.PROTECTION_ENVIRONMENTAL, 4, true);
@@ -59,11 +67,15 @@ public class CommandMonnaie implements CommandExecutor {
 				billetCentM.addEnchant(Enchantment.OXYGEN, 1, true);
 				billetCentM.addEnchant(Enchantment.THORNS, 3, true);
 				billetCent.setItemMeta(billetCentM);
+				Repairable billetCentR = (Repairable) billetCent.getItemMeta();
+				billetCentR.setRepairCost(511);
+				billetCent.setItemMeta((ItemMeta) billetCentR);
 				inv.setItem(1, billetCent);
 				
 				//Billet 1000
 				ItemStack billetMille = new ItemStack(Material.DIAMOND_BLOCK, 64);
 				ItemMeta billetMilleM = billetMille.getItemMeta();
+				billetMilleM.setDisplayName("Billet 1000");
 				billetMilleM.addEnchant(Enchantment.RIPTIDE, 3, true);
 				billetMilleM.addEnchant(Enchantment.DIG_SPEED, 5, true);
 				billetMilleM.addEnchant(Enchantment.DURABILITY, 3, true);
@@ -74,6 +86,9 @@ public class CommandMonnaie implements CommandExecutor {
 				billetMilleM.addEnchant(Enchantment.LURE, 3, true);
 				billetMilleM.addEnchant(Enchantment.LOOT_BONUS_BLOCKS, 3, true);
 				billetMille.setItemMeta(billetMilleM);
+				Repairable billetMilleR = (Repairable) billetMille.getItemMeta();
+				billetMilleR.setRepairCost(511);
+				billetMille.setItemMeta((ItemMeta) billetMilleR);
 				inv.setItem(0, billetMille);
 				
 				p.openInventory(inv);
