@@ -64,7 +64,7 @@ public class CommandMonnaie implements CommandExecutor {
 				billetCentM.addEnchant(Enchantment.LOYALTY, 3, true);
 				billetCentM.addEnchant(Enchantment.CHANNELING, 1, true);
 				billetCentM.addEnchant(Enchantment.MULTISHOT, 1, true);
-				billetCentM.addEnchant(Enchantment.OXYGEN, 1, true);
+				billetCentM.addEnchant(Enchantment.WATER_WORKER, 1, true);
 				billetCentM.addEnchant(Enchantment.THORNS, 3, true);
 				billetCent.setItemMeta(billetCentM);
 				Repairable billetCentR = (Repairable) billetCent.getItemMeta();
