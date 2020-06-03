@@ -24,6 +24,7 @@ public class Main extends JavaPlugin {
 		getCommand("village").setExecutor(new CommandVillage());
 		getCommand("ville").setExecutor(new CommandVille());
 		getCommand("monnaie").setExecutor(new CommandMonnaie());
+		getCommand("avantposte").setExecutor(new CommandAvantPoste());
 		getServer().getPluginManager().registerEvents(new PluginListeners(), this);
 	}
 	

@@ -25,3 +25,5 @@ commands:
   monnaie:
     description: Give la monnaie choisie
     permission: monnaie.use
+  avantposte:
+    description: Teleporter un joueur a l avantposte

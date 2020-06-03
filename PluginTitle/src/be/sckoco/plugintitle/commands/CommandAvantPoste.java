@@ -7,17 +7,17 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class CommandVille implements CommandExecutor {
+public class CommandAvantPoste implements CommandExecutor {
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if(sender instanceof Player) {
 			Player player = (Player) sender;
 			
-			Location ville = new Location(Bukkit.getWorld("world"), 56801.530, 73, 55031.508, -1.0f, 0.2f);
+			Location avantPoste = new Location(Bukkit.getWorld("world"), 1037.641, 64, -724.431, -90.8f, 1.1f);
 			
-			player.teleport(ville);
-			player.sendMessage("§6Téléportation à la ville terminée");
+			player.teleport(avantPoste);
+			player.sendMessage("§6Téléportation vers l'avant-poste terminé");
 			
 			return true;
 		}
