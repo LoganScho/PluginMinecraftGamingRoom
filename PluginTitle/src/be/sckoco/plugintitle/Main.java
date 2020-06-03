@@ -6,6 +6,7 @@ import be.sckoco.plugintitle.commands.CommandBvn;
 import be.sckoco.plugintitle.commands.CommandEvent;
 import be.sckoco.plugintitle.commands.CommandMonnaie;
 import be.sckoco.plugintitle.commands.CommandAide;
+import be.sckoco.plugintitle.commands.CommandAvantPoste;
 import be.sckoco.plugintitle.commands.CommandRdm;
 import be.sckoco.plugintitle.commands.CommandRdv;
 import be.sckoco.plugintitle.commands.CommandVillage;
