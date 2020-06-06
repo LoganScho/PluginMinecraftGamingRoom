@@ -27,3 +27,6 @@ commands:
     permission: monnaie.use
   avantposte:
     description: Teleporter un joueur a l avantposte
+  vague:
+    description: Spawn vague de pillagers
+    permission: vague.use

@@ -17,7 +17,7 @@ public class CommandAide implements CommandExecutor {
 				p.sendMessage("§e-------------Commandes Plugin GamingRoom-------------");
 				p.sendMessage("§e/bvn <pseudo> -> Accueillir la personne qui vient de rejoindre");
 				p.sendMessage("§e/avantposte -> Se téléporter à l'avant-poste");
-				p.sendMessage("§e/village -> Se teleporter au village");
+				p.sendMessage("§e/village -> Se téléporter au village");
 				p.sendMessage("§e/ville -> Se téléporter à la ville");
 			}
 			
@@ -27,8 +27,9 @@ public class CommandAide implements CommandExecutor {
 				p.sendMessage("§e/event <message> -> Mettre un message d'event");
 				p.sendMessage("§e/monnaie -> Accès aux différentes monnaies");
 				p.sendMessage("§e/rdm -> Prévenir d'un redémarrage du serveur");
-				p.sendMessage("§e/rdv -> Mettre un message d'un rendez-vous à l'église");
-				p.sendMessage("§e/village -> Se teleporter au village");
+				p.sendMessage("§e/rdv -> Mettre un message pour rendez-vous à l'église");
+				p.sendMessage("§e/vague <numVague> -> Spawn une vague de Pillagers");
+				p.sendMessage("§e/village -> Se téléporter au village");
 				p.sendMessage("§e/ville -> Se téléporter à la ville");
 			}
 					
