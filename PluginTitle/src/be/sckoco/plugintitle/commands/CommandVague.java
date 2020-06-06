@@ -125,6 +125,11 @@ public class CommandVague implements CommandExecutor {
 						nbSpawns = 45;
 						nbSpots = 7;
 						break;
+					case "boss" :
+						for(Player pl : Bukkit.getOnlinePlayers()) {
+							pl.sendTitle("§cWarning ! Plot twist", null, 10, 70, 20);
+						}
+						break;
 					default :
 						player.sendMessage("§4Le paramètre n'est pas valide");
 						return false;
@@ -133,11 +138,6 @@ public class CommandVague implements CommandExecutor {
 				if(!args[0].equalsIgnoreCase("boss")) {
 					for(Player pl : Bukkit.getOnlinePlayers()) {
 						pl.sendTitle("§6Vague "+args[0], null, 10, 70, 20);
-					}
-				}
-				else if(args[0].equalsIgnoreCase("boss")) {
-					for(Player pl : Bukkit.getOnlinePlayers()) {
-						pl.sendTitle("§cWarning ! Plot twist", null, 10, 70, 20);
 					}
 				}
 				
