@@ -9,6 +9,7 @@ import be.sckoco.plugintitle.commands.CommandAide;
 import be.sckoco.plugintitle.commands.CommandAvantPoste;
 import be.sckoco.plugintitle.commands.CommandRdm;
 import be.sckoco.plugintitle.commands.CommandRdv;
+import be.sckoco.plugintitle.commands.CommandSoute;
 import be.sckoco.plugintitle.commands.CommandVague;
 import be.sckoco.plugintitle.commands.CommandVillage;
 import be.sckoco.plugintitle.commands.CommandVille;
@@ -28,6 +29,7 @@ public class Main extends JavaPlugin {
 		getCommand("monnaie").setExecutor(new CommandMonnaie());
 		getCommand("avantposte").setExecutor(new CommandAvantPoste());
 		getCommand("vague").setExecutor(new CommandVague());
+		getCommand("soute").setExecutor(new CommandSoute());
 		getServer().getPluginManager().registerEvents(new PluginListeners(), this);
 	}
 	

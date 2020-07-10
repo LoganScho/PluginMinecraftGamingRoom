@@ -30,3 +30,6 @@ commands:
   vague:
     description: Spawn vague de pillagers
     permission: vague.use
+  soute:
+    description: Teleportation pour les donateurs
+    permission: donateur.use
