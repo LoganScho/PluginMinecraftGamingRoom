@@ -32,4 +32,6 @@ commands:
     permission: vague.use
   soute:
     description: Teleportation pour les donateurs
-    permission: donateur.use
+    permission: soute.use
+  rip:
+    description: Afficher message mort
