@@ -15,9 +15,10 @@ public class CommandAide implements CommandExecutor {
 			
 			if(args.length == 0) {
 				p.sendMessage("§e-------------Commandes Plugin GamingRoom-------------");
-				p.sendMessage("§e/bvn <pseudo> -> Accueillir la personne qui vient de rejoindre");
 				p.sendMessage("§e/avantposte -> Se téléporter à l'avant-poste");
+				p.sendMessage("§e/bvn <pseudo> -> Accueillir la personne qui vient de rejoindre");
 				p.sendMessage("§e/de -> Lancer les deux dés pour la partie de Monopoly");
+				p.sendMessage("§e/rip -> Pleurer la mort d'un joueur");
 				p.sendMessage("§e/village -> Se téléporter au village");
 				p.sendMessage("§e/ville -> Se téléporter à la ville");
 			}

@@ -90,7 +90,6 @@ public class Main extends JavaPlugin {
 			public void run() {
 				for(Player p : Bukkit.getWorld("world").getPlayers()) {
 					Location loc = p.getLocation();
-					System.out.println(p.getName() + " -> X : " + loc.getBlockX() + " Y : " + loc.getBlockY() + " Z : " + loc.getBlockZ());
 					try {
 						FileWriter writer = new FileWriter(file, true);
 						BufferedWriter bw = new BufferedWriter(writer);

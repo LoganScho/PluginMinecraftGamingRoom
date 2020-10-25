@@ -15,7 +15,7 @@ public class CommandBox implements CommandExecutor {
 		if(sender instanceof Player) {
 			 Player player = (Player) sender;
 			 
-			 if(player.getUniqueId().equals("ed281829-ab88-4782-ba14-3a5926962fc0") || player.getUniqueId().equals("4fe584b4-7864-4c29-b07a-1e1a887b8b0b")){
+			 if(player.getUniqueId().toString().equals("ed281829-ab88-4782-ba14-3a5926962fc0") || player.getUniqueId().toString().equals("4fe584b4-7864-4c29-b07a-1e1a887b8b0b")){
 				 
 				 Location box = new Location(Bukkit.getWorld("world"), -12525.470, 66, 85.500, -180.0f, 3.2f);
 				 
@@ -23,6 +23,9 @@ public class CommandBox implements CommandExecutor {
 				 player.sendMessage("§6Téléportation à la box terminée");
 				 
 				 return true;
+			 }
+			 else {
+				 player.sendMessage("§cVous n'êtes pas autorisé à entrer cette commande");
 			 }
 			 
 		}
