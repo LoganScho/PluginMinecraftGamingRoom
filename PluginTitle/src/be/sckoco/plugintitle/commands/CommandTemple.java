@@ -15,7 +15,7 @@ public class CommandTemple implements CommandExecutor {
 		if(sender instanceof Player) {
 			
 			Player player = (Player) sender;
-			Location temple = new Location(Bukkit.getWorld("world"), -87.650, 73, 220.433);
+			Location temple = new Location(Bukkit.getWorld("world"), -87.650, 73, 220.433, 95.9f, 3.0f);
 					
 			player.sendMessage("§6Téléportation au temple réussie");
 			player.teleport(temple);
