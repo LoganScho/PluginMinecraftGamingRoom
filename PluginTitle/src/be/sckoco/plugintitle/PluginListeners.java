@@ -42,6 +42,7 @@ public class PluginListeners implements Listener {
 			if(message.contains(receiver.getName())) {
 				receiver.sendMessage("§6Vous avez été mentionné !");;
 				receiver.playSound(receiver.getLocation(), Sound.ENTITY_CAT_AMBIENT, 1.0f, 1.0f);
+				receiver.playSound(receiver.getLocation(), Sound.BLOCK_BELL_USE, 1.0f, 1.0f);
 			}
 		}
 		
