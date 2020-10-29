@@ -25,6 +25,7 @@ import be.sckoco.plugintitle.commands.CommandRdm;
 import be.sckoco.plugintitle.commands.CommandRdv;
 import be.sckoco.plugintitle.commands.CommandRip;
 import be.sckoco.plugintitle.commands.CommandSoute;
+import be.sckoco.plugintitle.commands.CommandTemple;
 import be.sckoco.plugintitle.commands.CommandVague;
 import be.sckoco.plugintitle.commands.CommandVillage;
 import be.sckoco.plugintitle.commands.CommandVille;
@@ -80,6 +81,7 @@ public class Main extends JavaPlugin {
 		getCommand("rip").setExecutor(new CommandRip());
 		getCommand("de").setExecutor(new CommandDe());
 		getCommand("box").setExecutor(new CommandBox());
+		getCommand("temple").setExecutor(new CommandTemple());
 		getServer().getPluginManager().registerEvents(new PluginListeners(), this);
 		
 		

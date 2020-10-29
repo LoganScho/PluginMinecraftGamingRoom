@@ -7,19 +7,21 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class CommandVillage implements CommandExecutor {
+public class CommandTemple implements CommandExecutor {
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		
 		if(sender instanceof Player) {
-			Player player = (Player) sender;
-			Location village = new Location(Bukkit.getWorld("world"), 224.500, 63, 36.500, -178.3f, 3.4f);
 			
-			player.sendMessage("§6Téléportation au village terminée");
-			player.teleport(village);
+			Player player = (Player) sender;
+			Location temple = new Location(Bukkit.getWorld("world"), -87.650, 73, 220.433);
+					
+			player.sendMessage("§6Téléportation au temple réussie");
+			player.teleport(temple);
 			
 			return true;
+			
 		}
 		
 		return false;
