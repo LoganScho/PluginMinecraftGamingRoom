@@ -93,6 +93,7 @@ public class Main extends JavaPlugin {
 				for(Player p : Bukkit.getWorld("world").getPlayers()) {
 					Location loc = p.getLocation();
 					try {
+						File file = new File("plugins/PluginGR/" + date + ".txt");
 						FileWriter writer = new FileWriter(file, true);
 						BufferedWriter bw = new BufferedWriter(writer);
 						String line = "[" + formatPos.format(new Date()) + " - " + p.getWorld().getName() + "] : " + p.getName() + " -> X : " + loc.getBlockX() + " Y : " + loc.getBlockY() + " Z : " + loc.getBlockZ();
