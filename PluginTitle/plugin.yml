@@ -41,3 +41,5 @@ commands:
     description: Teleportation vers box
   temple:
     description: Teleportation vers le temple
+  stoprain:
+    description: Proposer un arret de la pluie

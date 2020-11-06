@@ -19,6 +19,7 @@ public class CommandAide implements CommandExecutor {
 				p.sendMessage("§e/bvn <pseudo> -> Accueillir la personne qui vient de rejoindre");
 				p.sendMessage("§e/de -> Lancer les deux dés pour la partie de Monopoly");
 				p.sendMessage("§e/rip -> Pleurer la mort d'un joueur");
+				p.sendMessage("§e/temple -> Se téléporter au temple");
 				p.sendMessage("§e/village -> Se téléporter au village");
 				p.sendMessage("§e/ville -> Se téléporter à la ville");
 			}

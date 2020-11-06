@@ -2,6 +2,7 @@ package be.sckoco.plugintitle;
 
 import java.util.Iterator;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -12,6 +13,12 @@ import org.bukkit.inventory.InventoryView;
 import org.bukkit.inventory.ItemStack;
 
 public class PluginListeners implements Listener {
+	
+	private Main main;
+	
+	public PluginListeners(Main main) {
+		this.main = main;
+	}
 	
 	@EventHandler
 	public void OnClick(InventoryClickEvent event) {
@@ -35,6 +42,7 @@ public class PluginListeners implements Listener {
 	public void OnPlayerMessage(AsyncPlayerChatEvent event) {
 		
 		String message = event.getMessage();
+		Player sender = event.getPlayer();
 		Iterator<Player> it = event.getRecipients().iterator();
 		
 		while(it.hasNext()) {
@@ -44,6 +52,12 @@ public class PluginListeners implements Listener {
 				receiver.playSound(receiver.getLocation(), Sound.ENTITY_CAT_AMBIENT, 1.0f, 1.0f);
 				receiver.playSound(receiver.getLocation(), Sound.BLOCK_BELL_USE, 1.0f, 1.0f);
 			}
+		}
+		
+		if(message.equalsIgnoreCase("oui")) {
+			event.setCancelled(true);
+			Bukkit.broadcastMessage("§6" + sender.getName() + " veut aussi arrêter la pluie");
+			main.nbPlayerStopRain++;
 		}
 		
 	}
