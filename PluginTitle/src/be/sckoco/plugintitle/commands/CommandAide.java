@@ -20,18 +20,24 @@ public class CommandAide implements CommandExecutor {
 				p.sendMessage("§e/de -> Lancer les deux dés pour la partie de Monopoly");
 				p.sendMessage("§e/rip -> Pleurer la mort d'un joueur");
 				p.sendMessage("§e/temple -> Se téléporter au temple");
+				p.sendMessage("§e/stoprain -> Proposer un arrêt de la pluie");
 				p.sendMessage("§e/village -> Se téléporter au village");
 				p.sendMessage("§e/ville -> Se téléporter à la ville");
 			}
 			
 			if(args.length == 1 && args[0].equalsIgnoreCase("admin") && p.isOp()) {
 				p.sendMessage("§e-------------Commandes Plugin GamingRoom §c§lAdmin§r§e-------------");
+				p.sendMessage("§e/avantposte -> Se téléporter à l'avant-poste");
 				p.sendMessage("§e/bvn <pseudo> -> Accueillir la personne qui vient de rejoindre");
+				p.sendMessage("§e/de -> Lancer les deux dés pour la partie de Monopoly");
 				p.sendMessage("§e/event <message> -> Mettre un message d'event");
 				p.sendMessage("§e/monnaie -> Accès aux différentes monnaies");
 				p.sendMessage("§e/rdm -> Prévenir d'un redémarrage du serveur");
 				p.sendMessage("§e/rdv -> Mettre un message pour rendez-vous à l'église");
+				p.sendMessage("§e/rip -> Pleurer la mort d'un joueur");
+				p.sendMessage("§e/temple -> Se téléporter au temple");
 				p.sendMessage("§e/vague <numVague> -> Spawn une vague de Pillagers");
+				p.sendMessage("§e/stoprain -> Proposer un arrêt de la pluie");
 				p.sendMessage("§e/village -> Se téléporter au village");
 				p.sendMessage("§e/ville -> Se téléporter à la ville");
 			}
