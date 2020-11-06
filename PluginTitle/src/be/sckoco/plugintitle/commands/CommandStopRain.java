@@ -7,6 +7,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import be.sckoco.plugintitle.Main;
+import be.sckoco.plugintitle.State;
 import be.sckoco.plugintitle.tasks.TimerPluie;
 
 public class CommandStopRain implements CommandExecutor {

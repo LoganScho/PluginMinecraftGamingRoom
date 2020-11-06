@@ -33,7 +33,8 @@ import be.sckoco.plugintitle.commands.CommandVille;
 
 public class Main extends JavaPlugin {
 	
-	public int nbPlayerStopRain = 0;
+	public int nbPlayerStopRain = 1;
+	private State state;
 	
 	private static final DateFormat formatFichier = new SimpleDateFormat("dd-MM-yyyy");
 	private static final DateFormat formatPos = new SimpleDateFormat("HH:mm:ss");
@@ -43,6 +44,8 @@ public class Main extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		System.out.println("Lancement du plugin GamingRoom");
+		
+		setState(State.NORMAL);
 		
 		File dir = new File("plugins/PluginGR");
 		if(!dir.exists()) {
@@ -136,6 +139,14 @@ public class Main extends JavaPlugin {
 	@Override
 	public void onDisable() {
 		System.out.println("Le plugin GamingRoom vient de s'éteindre");
+	}
+	
+	public void setState(State state) {
+		this.state = state;
+	}
+	
+	public boolean isState(State state) {
+		return this.state == state;
 	}
 
 }

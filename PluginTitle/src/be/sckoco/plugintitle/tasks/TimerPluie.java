@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import be.sckoco.plugintitle.Main;
+import be.sckoco.plugintitle.State;
 
 public class TimerPluie extends BukkitRunnable{
 	
@@ -19,6 +20,7 @@ public class TimerPluie extends BukkitRunnable{
 	public void run() {
 		
 		if(timer == 30) {
+			main.setState(State.RAINSTOP);
 			Bukkit.broadcastMessage("§6Entrez §eoui§6 si vous voulez arrêter la pluie");
 			Bukkit.broadcastMessage("§6Vous avez 30 secondes");
 		}
@@ -26,6 +28,7 @@ public class TimerPluie extends BukkitRunnable{
 		if(main.nbPlayerStopRain >= nbPlayer/2) {
 			Bukkit.getWorld("world").setStorm(false);
 			Bukkit.broadcastMessage("§6La pluie s'arrête...");
+			main.setState(State.NORMAL);
 			cancel();
 		}
 		
@@ -35,6 +38,7 @@ public class TimerPluie extends BukkitRunnable{
 		
 		if(timer == 0) {
 			Bukkit.broadcastMessage("§6Le temps est écoulé, vous n'avez pas arrêter la pluie");
+			main.setState(State.NORMAL);
 			cancel();
 		}
 		timer--;
