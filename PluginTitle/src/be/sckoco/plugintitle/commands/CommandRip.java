@@ -22,7 +22,7 @@ public class CommandRip implements CommandExecutor {
 			if (args.length == 1) {
 				String targetName = args[0];
 				
-				if(Bukkit.getPlayer(targetName) != null) {
+				if(Bukkit.getPlayerExact(targetName) != null) {
 					p.chat("Repose en paix §a"+ targetName);
 				}
 				else {
