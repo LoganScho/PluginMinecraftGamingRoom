@@ -34,7 +34,7 @@ public class CommandStopRain implements CommandExecutor {
 				p.sendMessage("§cIl ne pleut pas actuellement");
 			}
 			else {
-				Bukkit.broadcastMessage("§6" + p.getName() + " propose un arrêt de la pluie");
+				Bukkit.broadcastMessage("§e" + p.getName() + "§6 propose un arrêt de la pluie");
 				main.getPlayersStopRain().add(p);
 				
 				TimerPluie tp = new TimerPluie(main);

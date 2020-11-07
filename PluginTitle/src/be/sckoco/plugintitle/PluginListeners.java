@@ -60,7 +60,7 @@ public class PluginListeners implements Listener {
 				sender.sendMessage("§cTon vote a déjà été pris en compte !");
 			}
 			else {
-				Bukkit.broadcastMessage("§6" + sender.getName() + " veut aussi arrêter la pluie");
+				Bukkit.broadcastMessage("§e" + sender.getName() + "§6 veut aussi arrêter la pluie");
 				main.nbPlayerStopRain++;
 				main.getPlayersStopRain().add(sender);
 			}
