@@ -28,7 +28,9 @@ public class TimerPluie extends BukkitRunnable{
 		if(main.nbPlayerStopRain >= nbPlayer/2) {
 			Bukkit.getWorld("world").setStorm(false);
 			Bukkit.broadcastMessage("§6La pluie s'arrête...");
+			main.nbPlayerStopRain = 1;
 			main.setState(State.NORMAL);
+			main.getPlayersStopRain().clear();
 			cancel();
 		}
 		
@@ -39,6 +41,7 @@ public class TimerPluie extends BukkitRunnable{
 		if(timer == 0) {
 			Bukkit.broadcastMessage("§6Le temps est écoulé, vous n'avez pas arrêter la pluie");
 			main.setState(State.NORMAL);
+			main.getPlayersStopRain().clear();
 			cancel();
 		}
 		timer--;

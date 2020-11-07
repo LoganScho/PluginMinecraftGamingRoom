@@ -24,11 +24,18 @@ public class CommandStopRain implements CommandExecutor {
 		if(sender instanceof Player) {
 			Player p = (Player) sender;
 			
+			if(main.isState(State.RAINSTOP)) {
+				p.sendMessage("§cUn arrêt de la pluie a déjà été proposé");
+				p.sendMessage("§cEntre §eoui§c pour accepter la propostion déjà en cours");
+				return true;
+			}
+			
 			if(!Bukkit.getWorld("world").hasStorm()) {
 				p.sendMessage("§cIl ne pleut pas actuellement");
 			}
 			else {
 				Bukkit.broadcastMessage("§6" + p.getName() + " propose un arrêt de la pluie");
+				main.getPlayersStopRain().add(p);
 				
 				TimerPluie tp = new TimerPluie(main);
 				tp.runTaskTimer(main, 0, 20);

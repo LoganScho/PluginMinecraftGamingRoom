@@ -56,8 +56,14 @@ public class PluginListeners implements Listener {
 		
 		if(message.equalsIgnoreCase("oui") && main.isState(State.RAINSTOP)) {
 			event.setCancelled(true);
-			Bukkit.broadcastMessage("§6" + sender.getName() + " veut aussi arrêter la pluie");
-			main.nbPlayerStopRain++;
+			if(main.getPlayersStopRain().contains(sender)) {
+				sender.sendMessage("§cTon vote a déjà été pris en compte !");
+			}
+			else {
+				Bukkit.broadcastMessage("§6" + sender.getName() + " veut aussi arrêter la pluie");
+				main.nbPlayerStopRain++;
+				main.getPlayersStopRain().add(sender);
+			}
 		}
 		
 	}

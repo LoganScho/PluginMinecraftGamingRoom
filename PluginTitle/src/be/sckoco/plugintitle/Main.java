@@ -6,7 +6,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -34,6 +36,7 @@ import be.sckoco.plugintitle.commands.CommandVille;
 public class Main extends JavaPlugin {
 	
 	public int nbPlayerStopRain = 1;
+	private List<Player> playersStopRain = new ArrayList<>();
 	private State state;
 	
 	private static final DateFormat formatFichier = new SimpleDateFormat("dd-MM-yyyy");
@@ -139,6 +142,10 @@ public class Main extends JavaPlugin {
 	@Override
 	public void onDisable() {
 		System.out.println("Le plugin GamingRoom vient de s'éteindre");
+	}
+	
+	public List<Player> getPlayersStopRain() {
+		return playersStopRain;
 	}
 	
 	public void setState(State state) {
