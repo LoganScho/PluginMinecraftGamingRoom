@@ -17,7 +17,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitScheduler;
 
 import be.sckoco.plugintitle.commands.CommandBvn;
-import be.sckoco.plugintitle.commands.CommandDe;
 import be.sckoco.plugintitle.commands.CommandEvent;
 import be.sckoco.plugintitle.commands.CommandMonnaie;
 import be.sckoco.plugintitle.commands.CommandAide;
@@ -88,7 +87,6 @@ public class Main extends JavaPlugin {
 		getCommand("vague").setExecutor(new CommandVague());
 		getCommand("soute").setExecutor(new CommandSoute());
 		getCommand("rip").setExecutor(new CommandRip());
-		getCommand("de").setExecutor(new CommandDe());
 		getCommand("box").setExecutor(new CommandBox());
 		getCommand("temple").setExecutor(new CommandTemple());
 		getCommand("stoprain").setExecutor(new CommandStopRain(this));

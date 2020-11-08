@@ -35,8 +35,6 @@ commands:
     permission: soute.use
   rip:
     description: Afficher message mort
-  de:
-    description: Lancer les des
   box:
     description: Teleportation vers box
   temple:
